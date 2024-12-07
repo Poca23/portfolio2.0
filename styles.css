@@ -18,14 +18,12 @@ header {
   box-sizing: border-box;
 }
 
-body > header > div.logo{
+body > header > div.logo {
   text-align: center;
 }
 
-
 .logo {
   flex: 0 0 10%; /* Le logo occupe 10% du header */
-
 }
 
 .logo img {
@@ -94,7 +92,7 @@ article.facebook-feed h2 {
 
 .fb-page {
   margin: 0 auto;
-  width: 100% !important;  /* Assure que le widget occupe toute la largeur disponible */
+  width: 100% !important; /* Assure que le widget occupe toute la largeur disponible */
   height: auto !important;
   min-height: 600px;
   max-width: 500px;
@@ -105,7 +103,7 @@ article.facebook-feed h2 {
 }
 
 .fb-image-container img {
-  width: 100%;  /* L'image est responsive */
+  width: 100%; /* L'image est responsive */
   max-width: 80px;
   height: auto;
   object-fit: cover;
@@ -145,28 +143,38 @@ footer {
 
 .footer-map {
   display: flex;
+  justify-content: center;
   flex-direction: row;
   align-items: flex-start;
+  flex-wrap: wrap;
+
 }
 
-
-#mail{
-margin-top: 10px;
-margin-bottom: 10px;
+#mail {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .footer-map h3 {
+  width: 100%;
   font-size: 1.2rem;
   padding: 15px;
   color: white;
+  text-align: center;
 }
 
 #map {
+  width: 100%;
   width: 150px;
-  height:150px;
+  height: 150px;
   border-radius: 5px;
   box-shadow: 0 1px 5px #f1f1f1;
 }
+
+body > footer > div.footer-center > ul{
+  text-align: center;
+}
+
 
 /* Responsive : Moins de 900px */
 @media (max-width: 900px) {
@@ -207,7 +215,6 @@ body > footer > div.footer-left > div {
   object-fit: cover;
   height: auto;
 }
-
 
 .footer-left,
 .footer-center,

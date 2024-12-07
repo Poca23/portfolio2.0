@@ -1,0 +1,154 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center; /* Aligne le logo et le texte verticalement */
+  justify-content: space-between; /* Espacement entre le logo et le texte */
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logo {
+  flex: 0 0 20%; /* Le logo occupe 20% du header */
+}
+
+.logo img {
+  max-width: 100%; /* Assure que l'image du logo s'adapte */
+  height: auto;
+}
+
+.header-text {
+  text-align: center; /* Centre le texte dans la zone restante */
+  flex-grow: 1; /* Permet au texte d'occuper l'espace restant */
+}
+
+h1 {
+  margin: 0;
+  font-size: 3rem; /* Taille du titre principale */
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem; /* Taille de la phrase d'accroche */
+}
+/* Main */
+main {
+  padding: 70px 20px; /* Pour éviter que le contenu soit sous le header */
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.block {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.block h2 {
+  margin-top: 0;
+}
+
+/* Footer */
+footer {
+  margin: auto;
+  display: flex;
+  justify-content: space-around; /* Espacement égal entre les sections */
+  align-items: center; /* Centre verticalement les éléments */
+  padding: 15px; /* Plus d'espace autour */
+  background-color: #333;
+  color: white;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1; /* Chaque section occupe le même espace */
+  display: flex;
+  flex-direction: column; /* Empile les éléments verticalement */
+  align-items: center; /* Centre horizontalement chaque section */
+}
+
+.footer-left a,
+.footer-right a {
+  color: white;
+  text-decoration: none;
+  margin: 10px; /* Espacement entre les liens */
+}
+
+.footer-center ul {
+  list-style: none;
+  padding: 10px;
+}
+
+.footer-center ul li {
+  margin: 10px; /* Espacement entre les éléments de la liste */
+}
+
+.footer-center ul a {
+  color: white;
+  text-decoration: none;
+  text-align: center; /* Centre les liens */
+}
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Dispose le logo et le texte en colonne sur petits écrans */
+    text-align: center; /* Centre tout le contenu */
+  }
+
+  .logo {
+    flex: 0 0 auto; /* Le logo n'occupe plus une portion fixe de l'espace */
+    margin-bottom: 20px; /* Espace entre le logo et le texte */
+  }
+
+  h1 {
+    font-size: 2.5rem; /* Taille du titre réduite sur petit écran */
+  }
+
+  h2 {
+    font-size: 1.2rem; /* Taille de la phrase d'accroche réduite */
+  }
+  main {
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer {
+    flex-direction: row; /* Les blocs passent à la verticale */
+    align-items: center; /* Centre tous les blocs */
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    align-items: center; /* Centre le contenu pour chaque section */
+  }
+}
+
+@media (max-width: 525px) {
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2rem; /* Réduit encore la taille du titre pour les très petits écrans */
+    }
+  
+    h2 {
+      font-size: 1rem; /* Réduit la taille de la phrase d'accroche */
+    }
+  }  footer {
+    flex-direction: column; /* Les blocs passent à la verticale */
+    align-items: center; /* Centre tous les blocs */
+  }
+}

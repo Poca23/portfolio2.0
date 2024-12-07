@@ -18,8 +18,14 @@ header {
   box-sizing: border-box;
 }
 
+body > header > div.logo{
+  text-align: center;
+}
+
+
 .logo {
   flex: 0 0 10%; /* Le logo occupe 10% du header */
+
 }
 
 .logo img {
@@ -59,12 +65,131 @@ main {
   background-color: #fff;
   border-radius: 5px;
   text-align: center;
+  cursor: pointer;
 }
 
 .block h2 {
   margin-top: 0;
 }
 
+/* Article - Facebook Feed */
+article.facebook-feed {
+  margin: 30px 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+article.facebook-feed h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.fb-page-container {
+  display: block;
+}
+
+.fb-page {
+  margin: 0 auto;
+  width: 100% !important;  /* Assure que le widget occupe toute la largeur disponible */
+  height: auto !important;
+  min-height: 600px;
+  max-width: 500px;
+}
+
+.fb-image-container {
+  text-align: center;
+}
+
+.fb-image-container img {
+  width: 100%;  /* L'image est responsive */
+  max-width: 80px;
+  height: auto;
+  object-fit: cover;
+}
+
+.fb-link-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.fb-link-container a {
+  color: #0078d4;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.fb-link-container a:hover {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* Footer */
+footer {
+  margin: auto;
+  display: flex;
+  justify-content: space-around; /* Espacement égal entre les sections */
+  align-items: center; /* Centre verticalement les éléments */
+  padding: 15px; /* Plus d'espace autour */
+  background-color: #333;
+  color: white;
+}
+
+/* Carte dans le footer */
+.footer-left {
+  text-align: center;
+}
+
+.footer-map {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+
+#mail{
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+.footer-map h3 {
+  font-size: 1.2rem;
+  padding: 15px;
+  color: white;
+}
+
+#map {
+  width: 150px;
+  height:150px;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px #f1f1f1;
+}
+
+/* Responsive : Moins de 900px */
+@media (max-width: 900px) {
+  .fb-page {
+    display: none; /* Cacher le widget Facebook sous 900px */
+  }
+  .fb-image-container {
+    display: block; /* Afficher l'image pour les petits écrans */
+  }
+  .fb-link-container {
+    display: block; /* Afficher le lien */
+  }
+}
+
+/* Responsive : Moins de 600px */
+@media (max-width: 600px) {
+  article.facebook-feed {
+    padding: 15px; /* Réduire l'espace pour les petits écrans */
+  }
+  .fb-link-container a {
+    font-size: 1rem; /* Réduire la taille du texte pour les très petits écrans */
+  }
+}
 /* Footer */
 footer {
   margin: auto;
@@ -83,12 +208,6 @@ body > footer > div.footer-left > div {
   height: auto;
 }
 
-.logo-footer img {
-  max-width: 25%; /* Assure que l'image du logo s'adapte */
-  object-fit: cover;
-  height: auto;
-  filter: drop-shadow(0 0 2px #f1f1f1);
-}
 
 .footer-left,
 .footer-center,
@@ -149,6 +268,7 @@ body > footer > div.footer-left > div {
     flex-direction: column;
     gap: 10px;
   }
+
   footer {
     flex-direction: row; /* Les blocs passent à la verticale */
     align-items: center; /* Centre tous les blocs */

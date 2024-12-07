@@ -19,12 +19,14 @@ header {
 }
 
 .logo {
-  flex: 0 0 20%; /* Le logo occupe 20% du header */
+  flex: 0 0 10%; /* Le logo occupe 10% du header */
 }
 
 .logo img {
-  max-width: 100%; /* Assure que l'image du logo s'adapte */
+  max-width: 50%; /* Assure que l'image du logo s'adapte */
+  object-fit: cover;
   height: auto;
+  filter: drop-shadow(0 0 2px #f1f1f1);
 }
 
 .header-text {
@@ -35,6 +37,7 @@ header {
 h1 {
   margin: 0;
   font-size: 3rem; /* Taille du titre principale */
+  filter: drop-shadow(0 0 2px #f1f1f1);
 }
 
 h2 {
@@ -71,6 +74,20 @@ footer {
   padding: 15px; /* Plus d'espace autour */
   background-color: #333;
   color: white;
+}
+
+body > footer > div.footer-left > div {
+  max-width: 100%; /* Assure que l'image du logo s'adapte */
+  text-align: center;
+  object-fit: cover;
+  height: auto;
+}
+
+.logo-footer img {
+  max-width: 25%; /* Assure que l'image du logo s'adapte */
+  object-fit: cover;
+  height: auto;
+  filter: drop-shadow(0 0 2px #f1f1f1);
 }
 
 .footer-left,
@@ -115,6 +132,12 @@ footer {
     margin-bottom: 20px; /* Espace entre le logo et le texte */
   }
 
+  .logo img {
+    max-width: 50%; /* Assure que l'image du logo s'adapte */
+    object-fit: cover;
+    height: auto;
+  }
+
   h1 {
     font-size: 2.5rem; /* Taille du titre réduite sur petit écran */
   }
@@ -143,11 +166,12 @@ footer {
     h1 {
       font-size: 2rem; /* Réduit encore la taille du titre pour les très petits écrans */
     }
-  
+
     h2 {
       font-size: 1rem; /* Réduit la taille de la phrase d'accroche */
     }
-  }  footer {
+  }
+  footer {
     flex-direction: column; /* Les blocs passent à la verticale */
     align-items: center; /* Centre tous les blocs */
   }
